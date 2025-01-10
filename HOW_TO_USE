@@ -1,0 +1,24 @@
+Begin Functions:
+
+For x86_64 architecture
+_inv_syscall_x86_64
+
+For Intel 386 architecture
+_inv_syscall_i386
+
+For x86_64 if __x86_64__ is defined, and for i386 if __i386__ is defined
+_inv_syscall
+
+End
+
+Compile the src/syscallapi.s source file with GNU Assembler (GAS) into an object file. To do this, use the following command:
+
+bash $ as -o src/syscallapi.o src/syscallapi.s
+
+Include the include/syscallapi.h header file in your project to use the necessary functions and macros.
+
+Link your application object file with the syscallapi.o object file compiled in step one using the following command:
+
+bash $ gcc -o your_application your_application.o src/syscallapi.o
+
+After completing these steps, your project is ready to use the functions from syscallapi.
