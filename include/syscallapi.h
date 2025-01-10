@@ -57,9 +57,9 @@ void *_inv_syscall_i386(size_t number, ...);
 #endif
 
 #if defined(__x86_64__)
-#define _inv_syscall __inv_syscall_x86_64
+#define _inv_syscall _inv_syscall_x86_64
 #elif defined(__i386__)
-#define _inv_syscall __inv_syscall_i386
+#define _inv_syscall _inv_syscall_i386
 #endif // __x86_64__
 
 #endif // _SYSCALLAPI_H_LOADED
